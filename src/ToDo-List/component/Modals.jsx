@@ -39,7 +39,7 @@ export default function Modals({ Type, ModalOpen, setModalOpen, todo}) {
       toast.error("Please Enter the Title for this Task.");
       return;
     }
-    if (Title && Assign && Description && Status) {
+    if (Title && Assign && Description && Status) { // if condition of field input requirement
       if (Type === "Add") {
         Dispatcher(
           addTodo({
@@ -57,7 +57,7 @@ export default function Modals({ Type, ModalOpen, setModalOpen, todo}) {
       }
 
       if (Type === "Update") {
-        if (todo.Title !== Title || Assign !== todo.Assign || Description !== todo.Description || Status !== todo.Status) {
+        if (todo.Title !== Title || todo.Assign !== Assign || todo.Description !== Description ||  todo.Status !== Status) {
           Dispatcher(
             updateTodo({
               ...todo,
@@ -68,11 +68,9 @@ export default function Modals({ Type, ModalOpen, setModalOpen, todo}) {
             })
             );
             toast.error('No Changes Made.')
-        }
-
-       
+        }       
       }
-    } else if (Title && Assign && !Description && Status) {
+    } else if (Title && Assign && !Description === null && Status) {
       toast.error("Description must not be empty.");
     } else if (Title && !Assign && Description && Status) {
       toast.error("Must Assign this task to whom.");
