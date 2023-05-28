@@ -1,5 +1,5 @@
 import React from "react";
-import styles from '../styles/modules/todoitem.module.scss'
+import styles from '../styles/modules/todoItem.module.scss'
 import { getClasses } from "../../utilities/getClass";
 import { useDispatch } from "react-redux";
 import { deleteTodo } from "../slicers/Slicer";
