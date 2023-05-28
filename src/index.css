@@ -7,7 +7,8 @@
 	padding: 0;
 }
 :root {
-	--primaryPurple: #646ff0;
+	--primary: #5e4210;
+	--danger: rgb(107, 22, 22);
 	--black-1: #646681;
 	--black-2: #585858;
 	--bg-1: #f8f8ff;
@@ -20,7 +21,6 @@
 }
 html {
 	font-size: 10px;
-  	font-family: 'Poppins',sans-serif;
 }
 body {
 	width: 100%;

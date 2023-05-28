@@ -1,5 +1,9 @@
 @import '../_mixins.scss';
 
+.container * {
+    font-family: 'Poppins',sans-serif;
+}
+
 .app__wrapper {
 	max-width: 750px;
 	width: 100%;

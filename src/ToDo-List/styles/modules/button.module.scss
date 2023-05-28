@@ -22,10 +22,16 @@
 	}
 }
 .button--primary {
-	background-color: var(--primaryPurple);
+	background-color: var(--primary);
 	color: var(--white);
 }
 .button--secondary {
 	background-color: var(--bg-3);
 	color: var(--black-1);
 }
+
+.button--danger {
+	background-color: var(--danger);
+	color: var(--white);
+}
+
