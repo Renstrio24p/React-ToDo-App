@@ -1,29 +1,34 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 *,
-*::before,
-*::after {
-  margin: 0;
-  padding:0;
-  box-sizing: border-box;
+*::after,
+*::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
-
+:root {
+	--primaryPurple: #646ff0;
+	--black-1: #646681;
+	--black-2: #585858;
+	--bg-1: #f8f8ff;
+	--bg-2: #ecedf6;
+	--bg-3: #cccdde;
+	--gray-1: #eee;
+	--gray-2: #dedfe1;
+	--black: black;
+	--white: white;
+}
 html {
-  font-family: 'Poppins',sans-serif;
+	font-size: 10px;
+  	font-family: 'Poppins',sans-serif;
 }
-
 body {
-  width: 100%;
-  height: 100vh;
+	width: 100%;
+	min-height: 100vh;
+	background-color: var(--bg-1);
 }
-
-input,select {
-  font-family: 'Poppins',sans-serif;
-  color: #5c5b5b;
-  outline: none;
-}
-input[type=text]:focus ,textarea:focus{
-  outline: none !important;
-  border: 1px solid #555;
-  transition: .5s;
+.container {
+	width: 90%;
+	max-width: 1200px;
+	margin: 0 auto;
 }
