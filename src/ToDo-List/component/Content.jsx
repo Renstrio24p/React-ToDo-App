@@ -2,7 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import Item from "./Items";
 
-function Content(){
+export default function Content(){
     const todoList = useSelector((state) => state.todo.todoList);
 
     const SortedTodoList = [...todoList];
@@ -16,5 +16,3 @@ function Content(){
         </div>
     )
 }
-
-export default Content;

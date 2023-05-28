@@ -6,7 +6,7 @@ import { deleteTodo } from "../slicers/Slicer";
 import { toast } from "react-hot-toast";
 import Modal from "./Modal";
 
-function Item({todo}){
+export default function Item({todo}){
     const dispatcher = useDispatch();
     const [updateModalOpen,setUpdateModalOpen] = React.useState(false);
     const DeleteHandler = () => {
@@ -60,5 +60,3 @@ function Item({todo}){
         </>
     )
 }
-
-export default Item;

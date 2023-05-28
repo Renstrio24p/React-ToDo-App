@@ -8,7 +8,7 @@ const BtnTypes = {
     danger : 'danger',
 }
 
-function Buttons({children , type, variants, ...therest}){
+export default function Buttons({children , type, variants, ...therest}){
     return (
         <button className={getClasses([
             styles.button,styles[`button--${BtnTypes[variants]}`
@@ -20,13 +20,10 @@ function Buttons({children , type, variants, ...therest}){
     )
 }
 
-function SelectButton ({children, ...therest}){
+export function SelectButton ({children, ...therest}){
     return (
         <select className={getClasses([styles.button,styles.button__select])}
         {...therest}
         >{children}</select>
     )
 }
-
-export {SelectButton};
-export default Buttons;

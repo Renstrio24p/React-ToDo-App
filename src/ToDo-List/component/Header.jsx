@@ -3,7 +3,7 @@ import Buttons, { SelectButton } from "./Buttons";
 import styles from '../styles/modules/app.module.scss'
 import Modal from "./Modal";
 
-export function Header(){
+export default function Header(){
     const [ModalOpen, setModalOpen] = useState(false);
 
     const AddHandler = () => {
@@ -22,5 +22,3 @@ export function Header(){
         </div>
     )
 }
-
-export default Header;

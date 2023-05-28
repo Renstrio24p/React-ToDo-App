@@ -7,7 +7,7 @@ import {v4 as uuid} from 'uuid';
 import { toast } from "react-hot-toast";
 
 
-function Modal({ type, ModalOpen, setModalOpen , todo }) {
+export default function Modal({ type, ModalOpen, setModalOpen , todo }) {
     const [Title, setTitle] = React.useState('')
     const [Status, setStatus] = React.useState('Incomplete')
 
@@ -21,7 +21,7 @@ function Modal({ type, ModalOpen, setModalOpen , todo }) {
         if(type === 'update' && todo){
             setTitle(todo.Title);
             setStatus(todo.Status);
-        }
+        } 
     },[type,todo, ModalOpen])
 
     const Submitter = (e) => {
@@ -40,8 +40,8 @@ function Modal({ type, ModalOpen, setModalOpen , todo }) {
                        Status,
                        time : new Date().toLocaleString(),
                     }),
+                    ModalOpen = setModalOpen(false),
                     toast.success('Task Added Successful.'),
-                    setModalOpen(false)
                     )
                 }
 
@@ -51,7 +51,8 @@ function Modal({ type, ModalOpen, setModalOpen , todo }) {
                             ...todo,
                             Title,
                             Status,
-                        }))
+                        })),
+                        toast.success('Task successfully Updated..')
                     } else {
                         toast.error('no changes made');
                     }
@@ -105,5 +106,3 @@ function Modal({ type, ModalOpen, setModalOpen , todo }) {
     </>
   );
 }
-
-export default Modal;
