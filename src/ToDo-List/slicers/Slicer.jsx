@@ -45,6 +45,8 @@ export const todoSlice = createSlice({
         todoArr.forEach((todo) => {
           if (todo.id === action.payload.id) {
             todo.Status = action.payload.Status;
+            todo.Description = action.payload.Description;
+            todo.Assign = action.payload.Assign;
             todo.Title = action.payload.Title;
           }
         });

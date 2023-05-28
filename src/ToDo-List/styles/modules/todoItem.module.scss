@@ -4,9 +4,8 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding: 1rem;
+	padding: 5px;
 	background: var(--white);
-	margin-bottom: 1.5rem;
 	border-radius: 4px;
 	&:last-child {
 		margin-bottom: 0;
@@ -15,8 +14,8 @@
 .todoDetails {
 	display: flex;
 	align-items: center;
-	justify-content: flex-start;
 	gap: 1rem;
+	padding: 5px;
 }
 .svgBox {
 	flex-basis: 25px;
@@ -84,4 +83,35 @@
 	&:hover {
 		background-color: var(--gray-2);
 	}
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	gap: 0;
+	padding: 5px 5px 10px;
+}
+
+.timestamps {
+	display: flex;
+	justify-content: space-between;
+	padding: 5px 5px;
+}
+
+textarea {
+	resize: none;
+	width: 100%;
+	border: none;
+	padding: 5px;
+	white-space: pre-wrap;
+}
+
+.todoDescription {
+	width: 100%;
+	height: fit-content;
+	padding: 5px;
+	background-color: rgb(212, 211, 211);
+	color:black;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
 }

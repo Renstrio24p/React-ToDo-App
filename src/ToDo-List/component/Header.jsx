@@ -17,6 +17,8 @@ export default function Header(){
                 <option value="all">All</option>
                 <option value="incomplete">Incomplete</option>
                 <option value="complete">Complete</option>
+                <option value="Work in Progress">Work in Progress</option>
+                <option value="To be follow">To be follow</option>
             </SelectButton>
             <Modal type='add' ModalOpen={ModalOpen} setModalOpen={setModalOpen}/>
         </div>
