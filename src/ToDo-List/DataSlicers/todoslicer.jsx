@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const getInitialTodo = () => {
   // getting todo list
-  const localTodoList = window.localStorage.getItem('todoList');
+  const localTodoList = window.localStorage.getItem('todoList'); // todoList is a dataset key
   // if todo list is not empty
   if (localTodoList) {
     return JSON.parse(localTodoList);

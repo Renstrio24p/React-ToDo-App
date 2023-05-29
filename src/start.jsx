@@ -19,7 +19,7 @@ export default function Start() {
       </div>
           <Toaster
             position="bottom-left"
-          toastOptions={{
+            toastOptions={{
             style:{
                 fontSize: '1.4rem',
             }
