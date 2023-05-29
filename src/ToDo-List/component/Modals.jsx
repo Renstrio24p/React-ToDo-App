@@ -77,8 +77,11 @@ export default function Modals({ Type, ModalOpen, setModalOpen, todo}) {
               Assign,
               Description,
               Status,
-            })
-            );
+            }),
+            toast.success('Task Modified successfully.'),
+            setModalOpen(false)
+            )
+          } else {
             toast.error('No Changes Made.')
         }
 
