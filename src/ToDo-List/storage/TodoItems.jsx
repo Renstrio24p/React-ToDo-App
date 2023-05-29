@@ -72,6 +72,7 @@ return (
     </div>
     <Modals 
         Type={'Update'}
+        todo={todo}
         ModalOpen={UpdateModalOn}
         setModalOpen={setUpdateModalOn}
     />
