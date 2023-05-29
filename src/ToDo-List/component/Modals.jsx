@@ -75,8 +75,8 @@ export default function Modals({ Type, ModalOpen, setModalOpen, todo}) {
               ...todo,
               Title,
               Assign,
-              Status,
               Description,
+              Status,
             })
             );
             toast.error('No Changes Made.')
