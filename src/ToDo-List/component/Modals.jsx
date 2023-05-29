@@ -12,6 +12,18 @@ export default function Modals({ Type, ModalOpen, setModalOpen, todo}) {
   const [Status, setStatus] = React.useState("Incomplete");
   const [Description, setDescription] = React.useState([]);
 
+
+  React.useEffect(()=>{
+    if(Type === 'Update' && todo){
+        setTitle(todo.Title);
+        setAssign(todo.Assign);
+        setDescription(todo.Description);
+        setStatus(todo.Status);
+    }
+  },[Type,todo, ModalOpen])
+
+
+  // Constant Functions for each field
   const TitleStats = (e) => {
     setTitle(e.target.value);
   };
@@ -57,7 +69,7 @@ export default function Modals({ Type, ModalOpen, setModalOpen, todo}) {
       }
 
       if (Type === "Update") {
-        if (todo.Title !== Title || Assign !== todo.Assign || Description !== todo.Description || Status !== todo.Status) {
+        if (todo.Title !== Title || todo.Assign !== Assign || todo.Description !== Description || todo.Status !== Status) {
           Dispatcher(
             updateTodo({
               ...todo,
